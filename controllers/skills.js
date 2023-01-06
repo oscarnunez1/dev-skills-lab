@@ -39,7 +39,7 @@ function show(req, res) {
   })
   .catch(error => {
     console.log(error)
-    res.redirect('/todos')
+    res.redirect('/skills')
   })
 }
 

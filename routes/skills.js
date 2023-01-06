@@ -6,6 +6,7 @@ const router = Router()
 
 router.get('/', skillsCtrl.index)
 router.get('/new', skillsCtrl.new)
+router.post('/', skillsCtrl.create)
 
 export {
   router

@@ -22,6 +22,13 @@ app.set(
 app.set('view engine', 'ejs')
 
 // middleware
+app.use(function(req, res, next) {
+  console.log('Middleware is running!')
+  req.time = new Date().toLocaleTimeString()
+  console.log('the current time is', req.time);
+  next()
+})
+
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
